@@ -2,6 +2,8 @@
 # Made by Daniel Fellenz 01/17/2018
 # Imports for the files
 import os
+FullPath = input('Enter directory path you wish to inspect for files: ')
+FileEXT = input('Enter file ext that you are looking for: ')
 
 allfiles = []
 
@@ -24,5 +26,6 @@ def PullFiles(wPath, fType):
         PullFiles(subpath, fType)
     print(filelist)
 
-PullFiles('C:\Program Files (x86)\Steam\steamapps\common\Sid Meier\'s Civilization V\Assets\DLC\Expansion2', '.xml')
-print(allfiles)
+PullFiles(FullPath, FileEXT)
+for x in  range(len(allfiles)):
+    print(allfiles[x])
