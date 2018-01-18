@@ -2,11 +2,10 @@
 # Made by Daniel Fellenz 01/17/2018
 # Imports for the files
 import os
-FullPath = input('Enter directory path you wish to inspect for files: ')
-FileEXT = input('Enter file ext that you are looking for: ')
 
-allfiles = []
+# Creating a deffinition so that this can be used in more complext processes if needed in the future
 
+allfiles = [] # Making the  allfiles list globally
 def PullFiles(wPath, fType):
     workingpath = wPath
     subpaths = []
@@ -26,6 +25,11 @@ def PullFiles(wPath, fType):
         PullFiles(subpath, fType)
     print(filelist)
 
+# This is to request information from the user within gitbash making it easy to use on different locations and files
+FullPath = input('Enter directory path you wish to inspect for files: ')
+FileEXT = input('Enter file ext that you are looking for: ')
+
+# Running process
 PullFiles(FullPath, FileEXT)
 for x in  range(len(allfiles)):
     print(allfiles[x])
