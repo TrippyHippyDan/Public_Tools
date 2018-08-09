@@ -36,6 +36,10 @@ MouseMove, %xpos%, %ypos%, 0
 ::fblog::
 LoginFunction("Personal", "Facebook")
 	Return
+	
+::ticketlog::
+LoginFunction("Work", "Ticket Tracker")
+	Return
 
 ; Hot Key (CTRL + SHITF + 1)
 ^+1::
